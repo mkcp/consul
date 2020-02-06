@@ -5,6 +5,7 @@
 package audit
 
 import (
+	"fmt"
 	"github.com/hashicorp/eventlogger"
 	"time"
 )
@@ -12,13 +13,42 @@ import (
 // Auditor is lifted from Nomad's structure
 type Auditor struct {
 	broker eventlogger.Broker
-	et eventlogger.EventType
+	et     eventlogger.EventType
 }
 
 // Audit is a WIP
-func Audit(input interface{}) interface{} {
+func NewAuditor(eventType string) Auditor {
+	return Auditor{
+		broker: *eventlogger.NewBroker(),
+		et:     eventlogger.EventType(eventType),
+	}
+}
+
+// TODO Other kinds of sinks for the eventlogger?
+type Config struct {
+	LogFile string
+}
+
+// Maybe this is area specific fields? Can we define this at a top level?
+type Event struct {
+	ID          string
+	Stage       string
+	Operation   string
+	Path        string
+	DisplayName string
+	Timestamp   string
+	Request     interface{}
+	Response    interface{}
+}
+
+type Eventer interface {
+	Emit(eventType string, event Event)
+}
+
+func NewEvent(input interface{}) eventlogger.Event {
+	et := eventlogger.EventType(fmt.Sprint(input))
 	event := eventlogger.Event{
-		Type: "TestEvent",
+		Type:      et,
 		CreatedAt: time.Now(),
 		Formatted: nil,
 		Payload:   nil,
