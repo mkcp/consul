@@ -18,17 +18,21 @@ require (
 	github.com/armon/go-radix v1.0.0
 	github.com/aws/aws-sdk-go v1.25.41
 	github.com/coredns/coredns v1.1.2
+	github.com/creack/pty v1.1.9 // indirect
+	github.com/davecgh/go-spew v1.1.1
 	github.com/digitalocean/godo v1.10.0 // indirect
 	github.com/docker/go-connections v0.3.0
 	github.com/elazarl/go-bindata-assetfs v0.0.0-20160803192304-e1a2a7ec64b0
 	github.com/envoyproxy/go-control-plane v0.8.0
 	github.com/go-ole/go-ole v1.2.1 // indirect
+	github.com/go-test/deep v1.0.5 // indirect
 	github.com/gogo/googleapis v1.1.0
 	github.com/gogo/protobuf v1.2.1
 	github.com/golang/protobuf v1.3.1
 	github.com/google/gofuzz v0.0.0-20170612174753-24818f796faf
 	github.com/hashicorp/consul/api v1.2.0
 	github.com/hashicorp/consul/sdk v0.2.0
+	github.com/hashicorp/eventlogger v0.0.0-20200129140528-ac450aa9b42f
 	github.com/hashicorp/go-bexpr v0.1.2
 	github.com/hashicorp/go-checkpoint v0.0.0-20171009173528-1545e56e46de
 	github.com/hashicorp/go-cleanhttp v0.5.1
@@ -41,9 +45,9 @@ require (
 	github.com/hashicorp/go-raftchunking v0.6.1
 	github.com/hashicorp/go-sockaddr v1.0.2
 	github.com/hashicorp/go-syslog v1.0.0
-	github.com/hashicorp/go-uuid v1.0.1
+	github.com/hashicorp/go-uuid v1.0.2
 	github.com/hashicorp/go-version v1.1.0
-	github.com/hashicorp/golang-lru v0.5.1
+	github.com/hashicorp/golang-lru v0.5.4
 	github.com/hashicorp/hcl v1.0.0
 	github.com/hashicorp/hil v0.0.0-20160711231837-1e86c6b523c5
 	github.com/hashicorp/mdns v1.0.1 // indirect
@@ -55,6 +59,7 @@ require (
 	github.com/hashicorp/vault/api v1.0.4
 	github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d
 	github.com/imdario/mergo v0.3.6
+	github.com/kr/pty v1.1.8 // indirect
 	github.com/kr/text v0.1.0
 	github.com/miekg/dns v1.1.22
 	github.com/mitchellh/cli v1.0.0
@@ -71,13 +76,17 @@ require (
 	github.com/shirou/gopsutil v0.0.0-20181107111621-48177ef5f880
 	github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4 // indirect
 	github.com/spf13/pflag v1.0.3 // indirect
-	github.com/stretchr/objx v0.1.1 // indirect
+	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/stretchr/testify v1.4.0
-	golang.org/x/crypto v0.0.0-20191106202628-ed6320f186d4
-	golang.org/x/net v0.0.0-20190923162816-aa69164e4478
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58
-	golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9
+	golang.org/x/crypto v0.0.0-20200204104054-c9f3fb736b72
+	golang.org/x/lint v0.0.0-20200130185559-910be7a94367 // indirect
+	golang.org/x/mod v0.2.0 // indirect
+	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
+	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+	golang.org/x/sys v0.0.0-20200202164722-d101bd2416d5
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
+	golang.org/x/tools v0.0.0-20200206001521-403f1254bdfd // indirect
+	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 // indirect
 	google.golang.org/grpc v1.23.0
 	gopkg.in/square/go-jose.v2 v2.3.1
 	k8s.io/api v0.0.0-20190325185214-7544f9db76f6
